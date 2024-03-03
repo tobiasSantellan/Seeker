@@ -5,23 +5,23 @@ import SearchBar from "./components/SearchBar";
 import CategoryList from "./components/CategoryList";
 import BusinessList from "./components/BusinessList";
 
-// import { useEffect, useState } from "react";
-// import GlobalApi from "./services/GlobalApi";
+import { useEffect, useState } from "react";
+import GlobalApi from "./services/GlobalApi";
 
 export default function Home() {
   // const [businessList, setBusinessList] = useState([]);
   // const [selectedBusiness, setSelectedBusiness] = useState([]);
-  // useEffect(() => {
-  //   getNearByPlace();
-  // }, []);
+  useEffect(() => {
+    getNearByPlace();
+  }, []);
 
-  // const getNearByPlace = () => {
-  //   GlobalApi.getNearByPlace("gas_station", "35.5827712", "-80.8484864").then(
-  //     (resp) => {
-  //       console.log(resp);
-  //     }
-  //   );
-  // };
+  const getNearByPlace = () => {
+    GlobalApi.getNearByPlace("gas_station", "35.5827712", "-80.8484864").then(
+      (resp) => {
+        console.log(resp);
+      }
+    );
+  };
   return (
     <div className="flex">
       <SideNavBar />
