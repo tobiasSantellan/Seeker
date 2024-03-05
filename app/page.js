@@ -21,7 +21,7 @@ export default function Home() {
         console.log(resp);
       }
     );
-  };
+  }; // llamo a la función getNearByPlace cuando el componente se monta por primera vez. La función getNearByPlace hace una solicitud para obtener lugares cercanos utilizando la API GlobalApi.getNearByPlace y luego imprime la respuesta en la consola.
   return (
     <div className="flex">
       <SideNavBar />

@@ -15,7 +15,7 @@ async function handler(req, res) {
         req.query.lng +
         "&radius=5000&key=" +
         GOOGLE_API_KEY
-    );
+    ); // construyo dinámicamente una URL de solicitud a la API de Google Places para buscar lugares cercanos basados en los parámetros proporcionados en la solicitud HTTP (category, lat y lng) y luego utiliza Axios para realizar la solicitud y obtener la respuesta.
 
     const data = responce.data;
 
